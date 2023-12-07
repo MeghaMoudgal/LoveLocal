@@ -1,0 +1,6 @@
+def length_of_last_word(s):
+    words = s.rstrip().split()
+    return len(words[-1])
+
+# Test the function
+print(length_of_last_word("Hello World")) # Output: 5
