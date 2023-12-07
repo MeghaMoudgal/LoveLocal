@@ -1,0 +1,15 @@
+def maximum(matrix):
+    max_value = float('-inf')
+    m = len(matrix)
+    n = len(matrix[0])
+    
+    for i in range(m):
+        for j in range(n):
+            if matrix[i][j] > max_value:
+                max_value = matrix[i][j]
+                
+    return max_value
+
+# Test the function
+matrix = [["0"],["1"]]
+print(maximum(matrix)) # Output: 1
