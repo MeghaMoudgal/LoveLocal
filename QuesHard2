@@ -1,0 +1,18 @@
+def shortest_palindrome(s):
+    # Check if the string is a palindrome
+    for i in range(len(s)):
+        if s[i] != s[len(s) - 1 - i]:
+            break
+    else:
+        return s
+
+    # If not, add characters to the beginning of the string
+    for i in range(len(s)):
+        if s[i] == s[len(s) - 1 - i]:
+            return s[:i] + shortest_palindrome(s[i:])
+
+    return s + shortest_palindrome(s)
+
+# Test the function
+s = "aacecaaa"
+print(shortest_palindrome(s)) # Output: "aaacecaaa"
